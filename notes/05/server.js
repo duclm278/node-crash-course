@@ -4,7 +4,14 @@ const fs = require("fs");
 const _ = require("lodash");
 
 const server = http.createServer((req, res) => {
-  console.log(req.url, req.method);
+  // Test lodash
+  const num = _.random(0, 20);
+  const greet = _.once(() => {
+    console.log("hello", num);
+  });
+  greet(); // > "hello"
+  greet(); // Nothing happens
+
   res.setHeader("Content-Type", "text/html");
   let path = "./views/";
   switch (req.url) {

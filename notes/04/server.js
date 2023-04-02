@@ -25,14 +25,14 @@ const server = http.createServer((req, res) => {
   // res.write("<p>hello again, ninjas</p>");
   // res.end();
 
-  // 3. Return html pages
+  // 3. Return HTML pages
   // res.setHeader("Content-Type", "text/html");
   // fs.readFile("./views/index.html", (err, data) => {
   //   if (err) {
   //     console.log(err);
   //     res.end();
   //   } else {
-  //     // `res.write` can be used multiple times to write multiple chunks of data.
+  //     // `res.write()` can be used multiple times to write multiple chunks of data.
   //     // res.write(data);
   //     // res.end();
   //     // Optional `chunk` and `encoding` arguments allow one final additional
