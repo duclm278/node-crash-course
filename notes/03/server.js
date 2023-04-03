@@ -12,7 +12,7 @@ const server = http.createServer((req, res) => {
   console.log("Request made");
 });
 
-// Here, localhost is default value for 2nd argument
+// Default value for 2nd argument is localhost.
 server.listen(3000, "localhost", () => {
   console.log("Listening for requests on port 3000");
 });

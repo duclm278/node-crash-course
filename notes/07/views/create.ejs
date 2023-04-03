@@ -1,0 +1,30 @@
+<html lang="en">
+  <!-- 5. Partials -->
+  <%- include('partials/head') %>
+
+  <body>
+    <!-- Tags -->
+    <!-- % 'Scriptlet' tag, for control-flow, no output -->
+    <!-- %= Outputs the value into the template (HTML escaped) -->
+    <!-- %- Outputs the unescaped value into the template -->
+    <!-- %= include('./partials/nav.ejs'): Render HTML as string -->
+    <!-- %- include('./partials/nav.ejs'): Render HTML as tags -->
+
+    <!-- Shorter syntax -->
+    <%- include('partials/nav') %>
+
+    <div class="create-blog content">
+      <form>
+        <label for="title">Blog title:</label>
+        <input type="text" id="title" required />
+        <label for="snippet">Blog snippet:</label>
+        <input type="text" id="snippet" required />
+        <label for="body">Blog body:</label>
+        <textarea id="body" required></textarea>
+        <button>Submit</button>
+      </form>
+    </div>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>

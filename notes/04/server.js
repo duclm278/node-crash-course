@@ -3,11 +3,11 @@ const http = require("http");
 const fs = require("fs");
 
 const server = http.createServer((req, res) => {
-  // 1. Request object
+  // 1. Request Object
   // console.log(req);
   console.log(req.url, req.method);
 
-  // 2. Response object
+  // 2. Response Object
   // res.setHeader("Content-Type", "text/plain");
   // res.write("hello, ninjas");
   // res.end();
@@ -25,7 +25,7 @@ const server = http.createServer((req, res) => {
   // res.write("<p>hello again, ninjas</p>");
   // res.end();
 
-  // 3. Return HTML pages
+  // 3. Return HTML Pages
   // res.setHeader("Content-Type", "text/html");
   // fs.readFile("./views/index.html", (err, data) => {
   //   if (err) {
@@ -41,7 +41,7 @@ const server = http.createServer((req, res) => {
   //   }
   // });
 
-  // 4. Basic routing
+  // 4. Basic Routing
   res.setHeader("Content-Type", "text/html");
   let path = "./views/";
   switch (req.url) {

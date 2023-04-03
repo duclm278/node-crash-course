@@ -1,4 +1,4 @@
-// Express app
+// Express Apps
 const express = require("express");
 
 // Create express app
@@ -29,7 +29,7 @@ app.get("/about-us", (req, res) => {
   res.redirect("/about");
 });
 
-// 5.404's (Middleware): Fire every time request is made if code reaches this point
+// 5. 404's (Middleware): Fire every time request is made if code reaches this point
 app.use((req, res) => {
   // `res.status(404)` returns a response object
   res.status(404).sendFile("./views/404.html", { root: __dirname });
