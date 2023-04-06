@@ -1,7 +1,7 @@
 // Express Apps
 const express = require("express");
 
-// Create express app
+// Create Express app
 const app = express();
 
 // Listen for requests

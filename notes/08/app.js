@@ -1,7 +1,6 @@
 // Middleware
-// Code which runs (on the server) between getting a request and sending a response
-
-// Middleware Examples
+// > Code which runs (on the server) between getting a request and sending a response
+// Examples:
 // - Logger middleware to log details of every request
 // - Authentication check middleware for protected routes
 // - Middleware to parse JSON data from requests
@@ -35,10 +34,10 @@ app.listen(3000);
 //   next();
 // });
 
-// 3. Static Files
+// 3. Static files
 app.use(express.static("public"));
 
-// 4. 3rd-party Middleware
+// 4. 3rd-party middleware
 app.use(morgan("dev"));
 
 // This middleware sends response to browser by render(), making code below it
