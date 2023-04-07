@@ -22,7 +22,7 @@ app.set("view engine", "ejs");
 
 // Middleware & Static files
 app.use(express.static("public"));
-app.use(express.urlencoded({ extended: true })); // 1.1. Parse urlencoded data to req.body object
+app.use(express.urlencoded({ extended: true })); // Parse urlencoded data to req.body object
 app.use(morgan("dev"));
 
 // Routes

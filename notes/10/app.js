@@ -49,10 +49,10 @@ app.get("/blogs", (req, res) => {
 
 // 1. POST requests
 app.post("/blogs", (req, res) => {
-  // Return `undefined` if urlencoded() is not used
+  // 1.1. Return `undefined` if urlencoded() is not used
   // console.log(req.body);
 
-  // Create new blog
+  // 1.2. Create new blog
   const blog = new Blog(req.body);
 
   blog
