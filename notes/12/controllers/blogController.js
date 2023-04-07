@@ -1,7 +1,3 @@
-// 2. Make code cleaner and neater by moving handlers from routes to controllers
-// 3. Move index.ejs, create.ejs and details.ejs from views folder to views/blogs folder
-// Naming convention: blog_index, blog_details, blog_create_get, blog_create_post, blog_delete
-
 const Blog = require("../models/blog");
 
 const blog_index = (req, res) => {
@@ -23,7 +19,8 @@ const blog_details = (req, res) => {
       res.render("blogs/details", { blog: result, title: "Blog Details" });
     })
     .catch((err) => {
-      console.log(err);
+      // 2. Redirect to 404 page for blog details of non-existing id instead of hanging
+      res.status(404).render("404", { title: "Blog not found" });
     });
 };
 

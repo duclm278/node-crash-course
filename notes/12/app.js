@@ -1,9 +1,11 @@
-// Express Router & MVC
+// Wrap Up
+// 1. New trash icon
+// 2. Redirect to 404 page for blog details of non-existing id instead of hanging
 
 const express = require("express");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
-const BlogRoutes = require("./routes/blogRoutes-v2");
+const BlogRoutes = require("./routes/blogRoutes");
 
 // Create Express app
 const app = express();
@@ -34,10 +36,7 @@ app.get("/about", (req, res) => {
 });
 
 // Blog routes
-// app.use(BlogRoutes);
-
-// 1.1. Use BlogRoutes as middleware
-app.use("/blogs", BlogRoutes); // 1.2. Add /blogs prefix to all routes in BlogRoutes
+app.use("/blogs", BlogRoutes);
 
 // 404 page
 app.use((req, res) => {

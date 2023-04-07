@@ -1,0 +1,19 @@
+<html lang="en">
+  <%- include('partials/head') %>
+
+  <body>
+    <!-- Tags -->
+    <!-- % 'Scriptlet' tag, for control-flow, no output -->
+    <!-- %= Outputs the value into the template (HTML escaped) -->
+    <!-- %- Outputs the unescaped value into the template -->
+    <!-- %= include('./partials/nav.ejs'): Render HTML as string -->
+    <!-- %- include('./partials/nav.ejs'): Render HTML as tags -->
+
+    <!-- Shorter syntax -->
+    <%- include('partials/nav') %>
+
+    <div class="not-found content">OOPS, page not found :)</div>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>

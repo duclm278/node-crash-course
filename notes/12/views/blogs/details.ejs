@@ -1,13 +1,7 @@
 <html lang="en">
-  <!-- %- include('./partials/head') %> -->
-
-  <!-- 3. Update path after moving from `views` to `views/blogs` -->
   <%- include('../partials/head') %>
 
   <body>
-    <!-- %- include("./partials/nav.ejs") %> -->
-
-    <!-- 3. Update path after moving from `views` to `views/blogs` -->
     <%- include("../partials/nav.ejs") %>
 
     <div class="details content">
@@ -16,12 +10,12 @@
         <p><%= blog.body %></p>
       </div>
       <!-- Attribute `data-*` can be accessed later in JS through `dataset`. -->
-      <a class="delete" data-doc="<%= blog._id %>">delete</a>
+      <a class="delete" data-doc="<%= blog._id %>">
+        <!-- 1. New trash icon -->
+        <img src="/trashcan.svg" alt="Delete icon" />
+      </a>
     </div>
 
-    <!-- %- include("./partials/footer.ejs") %> -->
-
-    <!-- 3. Update path after moving from `views` to `views/blogs` -->
     <%- include("../partials/footer.ejs") %>
 
     <!-- Handle delete request -->

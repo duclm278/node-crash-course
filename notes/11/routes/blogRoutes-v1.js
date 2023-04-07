@@ -39,7 +39,7 @@ router.get("/create", (req, res) => {
 
 router.get("/:id", (req, res) => {
   const id = req.params.id;
-  console.log(id);
+
   Blog.findById(id)
     .then((result) => {
       res.render("blogs/details", { blog: result, title: "Blog Details" });
