@@ -1,5 +1,8 @@
 <html lang="en">
-  <%- include('partials/head') %>
+  <!-- %- include('partials/head') %> -->
+
+  <!-- 3. Update path after moving from `views` to `views/blogs` -->
+  <%- include('../partials/head') %>
 
   <body>
     <!-- Tags -->
@@ -10,7 +13,10 @@
     <!-- %- include('./partials/nav.ejs'): Render HTML as tags -->
 
     <!-- Shorter syntax -->
-    <%- include('partials/nav') %>
+    <!-- %- include('partials/nav') %> -->
+
+    <!-- 3. Update path after moving from `views` to `views/blogs` -->
+    <%- include('../partials/nav') %>
 
     <div class="blogs content">
       <h2>All Blogs</h2>
@@ -27,6 +33,9 @@
       <% } %>
     </div>
 
-    <%- include('partials/footer') %>
+    <!-- %- include('partials/footer') %> -->
+
+    <!-- 3. Update path after moving from `views` to `views/blogs` -->
+    <%- include('../partials/footer') %>
   </body>
 </html>
