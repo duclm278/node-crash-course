@@ -1,0 +1,33 @@
+<html lang="en">
+  <!-- 5. Partials -->
+  <%- include('partials/head') %>
+
+  <body>
+    <!-- Tags -->
+    <!-- % 'Scriptlet' tag, for control-flow, no output -->
+    <!-- %= Outputs the value into the template (HTML escaped) -->
+    <!-- %- Outputs the unescaped value into the template -->
+    <!-- %= include('./partials/nav.ejs'): Render HTML as string -->
+    <!-- %- include('./partials/nav.ejs'): Render HTML as tags -->
+
+    <!-- Shorter syntax -->
+    <%- include('partials/nav') %>
+
+    <div class="blogs content">
+      <h2>All Blogs</h2>
+      <% if (blogs.length > 0) { %>
+       <% blogs.forEach(blog => { %>
+        <!-- Set up route parameters -->
+        <a href="/blogs/<%= blog._id %>">
+          <h3 class="title"><%= blog.title %></h3>
+          <p class="snippet"><%= blog.snippet %></p>
+        </a>
+       <% }) %>
+      <% } else { %>
+        <p>There are no blogs to display...</p>
+      <% } %>
+    </div>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>
